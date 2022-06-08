@@ -1,3 +1,5 @@
 szöveg
 másik sor
 újabb sor
+tesztsor mobil
+
