@@ -1,19 +1,19 @@
 function calcAmount() {
-    let price=1000;
-    let amountInput=document.querySelector("input[name='amount-input']");
-    let amountNumber=parseInt(amountInput.value);
-    amountNumber=isNaN(amountNumber)? 0 : amountNumber;
+    let price = 1000;
+    let amountInput = document.querySelector("input[name='amount-input']");
+    let amountNumber = parseInt(amountInput.value);
+    amountNumber = isNaN(amountNumber) ? 0 : amountNumber;
     showSumPrice(price, amountNumber);
 }
 
-function showSumPrice(price, amountNumber){
-    let showAmount=document.querySelector("span.show-amount");
-    if(amountNumber>10){
+function showSumPrice(price, amountNumber) {
+    let showAmount = document.querySelector("span.show-amount");
+    if (amountNumber > 10) {
         alert("Maximum 10 terméket vásárolhat!");
-    } else if(amountNumber<1){
+    } else if (amountNumber < 1) {
         alert("Minimum 1 terméket kell vásárolnia!");
-    } else{
-        let amount=amountNumber*price;
+    } else {
+        let amount = amountNumber * price;
         showAmount.innerHTML = amount;
     }
 
@@ -48,11 +48,11 @@ window.addEventListener("resize", function(){
 
 // Parent element kezelése.
 let alertCloseButtons = document.querySelectorAll(".btn-close[data-bs-dismiss='alert']");
-let alertCloseEventHandlerFunction = function(ev) {
+let alertCloseEventHandlerFunction = function (ev) {
     this.parentElement.style.display = "none";
 }
 for (let i = 0; i < alertCloseButtons.length; i++) {
-    alertCloseButtons[i].addEventListener ("click", alertCloseEventHandlerFunction);
+    alertCloseButtons[i].addEventListener("click", alertCloseEventHandlerFunction);
 }
 
 // Select elem kitöltése
@@ -65,12 +65,30 @@ let toppings = [
 ];
 let toppingSelect = document.querySelector("#topInput")
 let index = 0;
-while(index < toppings.length){
+while (index < toppings.length) {
     let option = document.createElement("option");
     option.value = index;
     option.innerHTML = toppings[index];
     toppingSelect.appendChild(option);
     index++;
+}
+
+let hoSavTetok = [0, 15, 20, 25, 50];
+let hoFuggAjan = ["a zamatos forró csokoládét",
+    "melengető forró teánkat.",
+    "ínycsiklandó süteményünket",
+    "ízletes fagyit",
+    "Jéghideg, frissítő limonádét"]
+
+
+let napiHomer = 17;
+for (let index = 0; index < hoSavTetok.length; index++) {
+    if (hoSavTetok[index] > napiHomer) {
+        let ajanlMegjelPozi = document.querySelector("div.col-8 span")
+        let napiMegallAjan = hoFuggAjan[index]
+        ajanlMegjelPozi.innerHTML = napiMegallAjan;
+        break;
+    }
 }
 
 

@@ -14,7 +14,7 @@ for (let i = 0; i < numericArray.length; i++) {
     sum += numericArray[i];
 }
 console.log("Sum: ", sum);
-const newLocal = [1, 3, 2, 6, 5, 3, 4, 6, 7];
+
 /*
 Számlálás algoritmusa
 
@@ -80,4 +80,3 @@ for (let i = 0; i < numericArray.length && !found; i++) {
 }
 console.log("This aray contains element" ,find, found);
 
-[0, true, 'Boo'].filter( item => item )

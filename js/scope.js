@@ -6,4 +6,3 @@ const NAME = "Sanyi";
     console.log(NAME);
     
 }
-console.log(NAME);
