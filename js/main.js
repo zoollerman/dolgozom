@@ -98,7 +98,7 @@ orderForm.addEventListener("submit", function(ev){
     ev.preventDefault();
     
    
-    let inputs = this.querySelectorAll("select", "input");
+    let inputs = this.querySelectorAll("select, input");
     let values = {};
     for (let i = 0; i< inputs.length; i++){
     values[inputs[i].name] = inputs[i].value;      
