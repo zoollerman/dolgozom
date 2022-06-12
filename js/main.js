@@ -28,7 +28,7 @@ helpText.innerHTML = "Adja meg a feltéteket!";
 let parent = document.querySelector("div.form-group:nth-child(1)");
 parent.appendChild(helpText);
 
-parent.removeChild(helpText);
+// parent.removeChild(helpText);
 
 //Window events.
 let sendButton = document.querySelector("form .btn.btn-primary");
@@ -47,7 +47,7 @@ window.addEventListener("resize", function(){
 
 
 // Parent element kezelése.
-let alertCloseButtons = document.querySelectorAll(".btn-close[data-bs-dismiss='alert']");
+let alertCloseButtons = document.querySelectorAll(".close[data-dismiss='alert']");
 let alertCloseEventHandlerFunction = function (ev) {
     this.parentElement.style.display = "none";
 }
@@ -73,6 +73,8 @@ while (index < toppings.length) {
     index++;
 }
 
+//Napi ajánlat hőmérséklet szerint
+
 let hoSavTetok = [0, 15, 20, 25, 50];
 let hoFuggAjan = ["a zamatos forró csokoládét",
     "melengető forró teánkat.",
@@ -90,6 +92,20 @@ for (let index = 0; index < hoSavTetok.length; index++) {
         break;
     }
 }
+//Űrlap események
+let orderForm = document.querySelector("#orderForm");
+orderForm.addEventListener("submit", function(ev){
+    ev.preventDefault();
+    
+   
+    let inputs = this.querySelectorAll("select", "input");
+    let values = {};
+    for (let i = 0; i< inputs.length; i++){
+    values[inputs[i].name] = inputs[i].value;      
+   
+    }
+    console.log( values );
+});
 
 
 
