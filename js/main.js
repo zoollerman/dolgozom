@@ -106,6 +106,7 @@ orderForm.addEventListener("submit", function(ev){
     }
     console.log( values );
 });
+/*values= { top-input: "0", amount-input: "1" }*/
 
 
 
