@@ -1,5 +1,6 @@
+var basePrice = 1000;
 function calcAmount() {
-    let price = 1000;
+    let price = basePrice;
     let amountInput = document.querySelector("input[name='amount-input']");
     let amountNumber = parseInt(amountInput.value);
     amountNumber = isNaN(amountNumber) ? 0 : amountNumber;
@@ -59,6 +60,7 @@ for (let i = 0; i < alertCloseButtons.length; i++) {
 
 // Select elem kitöltése
 let toppings = [
+    "Plusz feltét nélkül",
     "Szalonna",
     "Hagyma",
     "Tükörtojás",
@@ -91,7 +93,6 @@ for (let index = 0; index < hoSavTetok.length; index++) {
         let ajanlMegjelPozi = document.querySelector("div.col-8 span")
         let napiMegallAjan = hoFuggAjan[index]
         ajanlMegjelPozi.innerHTML = napiMegallAjan;
-        break;
     }
 }
 //Űrlap események
@@ -107,12 +108,50 @@ orderForm.addEventListener("submit", function(ev){
    
     }
     console.log( values );
+    if (values["top-input"] > 0) {
+        basePrice = basePrice + 200;
+        
+    }
 });
 /*values= { top-input: "0", amount-input: "1" }*/
 
+/*switch
+
+case 0: dayN = "Vas";
+break;
+case 1: dayN = "Hét";
+break;
+case 2: dayN = "Ked";
+break;
+case 3: dayN = "Sze";
+break;
+case 4: dayN = "Csü";
+break;
+case 5: dayN = "Pén";
+break;
+case 6: dayN = "Szo";
+break;
+
+*/
+
+/* while elöltesz, mint a for
 
 
+let keys = Object.keys(animal);
+i= 0;
+while(i < keys.length) {
+    console.log(animal[keys[i]]);
+    i++;
+}
 
+hátulteszt, tehát egyszer mindenképp lefut
 
+do {
+    console.log(i);
+    i++;
+    
 
+}
+while(i < 0);
+*/
 
