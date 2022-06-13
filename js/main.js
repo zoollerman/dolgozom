@@ -32,14 +32,16 @@ parent.appendChild(helpText);
 
 //Window events.
 let sendButton = document.querySelector("form .btn.btn-primary");
+sendButton.addEventListener("click", function(){
+    alert("Hello JS!");
+});
 
 /* sendButton.onclick = function(){
 alert("Hello JS!");
 }
 
-sendButton.addEventListener("click", function(){
-    alert("Hello JS!");
-});
+
+
 
 window.addEventListener("resize", function(){
     console.log(this.innerHeight, this.innerWidth);
