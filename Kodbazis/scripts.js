@@ -1,72 +1,79 @@
-/*operátorok*/
 
-console.log(2+3);
+function susdMegARantottat() {
+    console.log(`Önts olajat a serpenyőbe`);
+    adjHozzaFuszereket();
+    console.log(`Süsd 4 percig`);
+    console.log(`Kész`);
+}
 
 
-// Aritmetikai
+function adjHozzaFuszereket() {
+    console.log(`Adj hozzá sót`);
+    console.log(`Adj hozzá borsot`);
+    console.log(`Adj hozzá paprikát`);
+}
 
-console.log(2+3);
+susdMegARantottat();
+console.log(`----`);
+susdMegARantottat();
+console.log(`----`);
+susdMegARantottat();
 
-/*
-Összehasonlító
+
+/* 
+Function, matematikai függvény
+input adatból outpiut adatot generáló eszköz
+
 */
 
-console.log(2 =="2");
-console.log(2 != 2);
-console.log(1 == true);
-console.log(1 === true);
-console.log(1 < true);
-console.log(1 > true);
-console.log(1 === true);
+function addOne(szam) {
+    return szam + 1;
+}
 
-/*
-* Logikai
-*(boolean, boolean) -> boolean
-*(boolean) -> boolean
-*/
+console.log(
+    addOne(addOne(addOne(3)))
+);
 
-// Logikai és
-
-console.log(true && true);
-
-// logikai VAGY
-
-console.log(true || false);
-
-//negálás
-
-console.log(!true);
-
-console.log(2 === 2 && 1 > 5);
-console.log(2 === 2 && 1 > 5 || true);
-
-console.log((2+3)*5);
-
-/**
- * String operátor
- */
+function addTwo(szam) {
+    return {
+        0: 2,
+        1: 3,
+        2: 4
+    }[szam];
+}
 
 
-console.log(`Szia` + ` Daniel`);
-
-// conditional, ternary
-//* (bool, any, any) -> any
-
-console.log(true ? `első` : `második`);
+console.log(addTwo(addTwo(0)));
 
 
-/*
-* Assignment
-*(var, any) -> any
-*/
+// First class cityzen
 
-var valtozo;
+// anonim function
 
-valtozo = `Szia`;
 
-console.log(valtozo);
+var addThree = function (szam) {
+    return szam + 3;
+};
+console.log(addThree(4));
 
-valtozo = 3;
+/* var window = {
+    console: {
+        log: function (msg) {
+            
+        }
+    }
+} */
 
-console.log(valtozo);
+document.all[7].style.backgroundColor = "red";
+
+document.all[7].
+
+
+console.dir(document.all[7]);
+
+
+
+
+
+
 
