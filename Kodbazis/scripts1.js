@@ -1,12 +1,12 @@
-/* fetch("https://jsonplaceholder.typicode.com/posts")
+fetch("https://jsonplaceholder.typicode.com/posts")
 .then(res => res.json())
 .then(res => console.log(res)); */
 
 /*
 * Object (Objectum)
-*/
 
-console.log(
+
+/* console.log(
     {
         firstName: "József",
         lastName: "Kovács",
@@ -60,4 +60,4 @@ console.log(
         }
     ][1].provider.country
 );
-
+ */
